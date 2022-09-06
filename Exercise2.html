@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="hasil"></p>
+    <p id="hasil2"></p>
+    <script>
+      const data = [
+        {
+          nama: "MUHAMMAD AFIF DWI ARDHIANSYAH",
+          namakampus: "Institut Teknologi Sepuluh Nopember",
+        },
+        {
+          nama: "MUHAMMAD DAMAS ABHIRAMA",
+          namakampus: "Institut Teknologi Sepuluh Nopember",
+        },
+        {
+          nama: "RIGAN RAHMADIN",
+          namakampus: "Universitas Amikom Yogyakarta",
+        },
+        {
+          nama: "Ahmad Ja'far Ali",
+          namakampus: "Universitas Negeri Surabaya",
+        },
+      ];
+
+      const hasil = [];
+      const hasil2 = [];
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].namakampus == "Institut Teknologi Sepuluh Nopember") {
+          hasil.push(data[i]);
+        } else {
+          hasil2.push(data[i]);
+        }
+      }
+      console.log(hasil);
+      let str = "";
+      let str2 = "";
+      for (let i = 0; i < hasil.length; i++) {
+        str = str + hasil[i].nama + " , ";
+      }
+      for (let i = 0; i < hasil2.length; i++) {
+        str2 = str2 + hasil2[i].nama + " , ";
+      }
+      document.getElementById("hasil").innerHTML = "Yang berasal dari Institut Teknologi Sepuluh Nopember adalah :" + str;
+      document.getElementById("hasil2").innerHTML = "Yang bukan berasal dari Institut Teknologi Sepuluh Nopember adalah :" + str2;
+    </script>
+  </body>
+</html>
